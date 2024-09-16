@@ -1,0 +1,194 @@
+@import url(https://fonts.googleapis.com/css?family=Ek+Mukta:200);
+
+$mukta: 'Ek Mukta', sans-serif;;
+
+body {
+    margin: 0;
+    line-height: 1.4;
+    //background: #E1E1E1;
+}
+
+.programme {
+    position: relative;
+    display: block;
+    
+    &:before {
+               
+        content:"";
+        position: absolute;
+        width: 200px;
+        height: 130px;
+        background-image: url("../../dist/plantgodown.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        left: 0%;
+        //bottom: 0px;
+
+        @include min($bp-tablet-px){
+    
+            height: 500px;
+        }
+    }
+    .content {
+        font-family: $mukta;
+        padding: 67px 4% 0;
+        width: 100%;
+    
+        text-align: justify;
+        //overflow: scroll;
+        //max-height: 100%;
+        &::-webkit-scrollbar  {
+            display: none;
+        }
+
+        h1{
+            font-family: 'glimmer_of_lightregular';
+            text-align: center;
+            margin-bottom: 15px;
+            font-size : font-clamp(35, 40, $bp-tablet, $bp-large)
+        }
+
+        h2 {
+            //margin-bottom: 20px;
+            letter-spacing: 1px;
+            font-family: 'signpainter_housescriptRg';
+            text-align: center;
+            font-size : font-clamp(25, 32, $bp-tablet, $bp-large)
+        }
+
+        h3 {
+            //text-align: center;
+            font-family: 'glimmer_of_lightregular';
+            margin: 25px 0;
+            font-size: font-clamp(20, 30, $bp-tablet, $bp-large);
+            text-align: left;
+
+            @include min($bp-tablet-px){
+                text-align: center;
+            }
+        }
+
+
+        .events {
+            display: flex;
+            flex-direction: column;
+            //align-items: center;
+
+            @include min($bp-tablet-px){
+                align-items: center;
+            }
+        }
+
+        .events.last {
+            margin-bottom: 2rem;
+        }
+
+
+        .event-box {
+           
+            display: flex;
+            //align-items: center;
+            gap: 20px;
+
+            img{
+                width: 50px;
+                max-height: 60px;
+                object-fit: contain;
+            }
+
+            p {
+                font-size: font-clamp(17, 22, $bp-tablet, $bp-large);
+                line-height: 1.5;
+                text-align: left;
+            }
+
+            p.time, p.event, p.location {
+                font-family: 'glimmer_of_lightregular';
+            }
+
+            .event-data {
+                margin-bottom: 2rem;
+            }
+
+            .item.location {
+                margin-bottom: 15px;
+            }
+
+            @include min($bp-tablet-px){
+                width: 60%;
+            }
+        }
+
+        .flower {
+            max-width: 200px;
+            min-width: 50px;
+            width: 10%;
+            margin: 2rem calc(50% - 5%);
+   
+        }
+
+        .other {
+
+            h3 {
+                @include min($bp-tablet-px){ 
+                    margin-top: 8rem;
+                }
+            }
+
+            p {
+                font-family: 'signpainter_housescriptRg';
+                font-size: font-clamp(25, 30, $bp-tablet, $bp-large);
+                text-align: center;
+            }
+        }
+        
+        .guirlande {
+            background-image: url("../../dist/guirlande.png");
+            background-size: contain;
+            width: 100%;
+            height: 50px;
+            background-repeat: no-repeat;
+            background-position: center;
+
+
+            @include min($bp-tablet-px){
+                background-repeat: repeat;
+                height: 60px;
+                position: absolute;
+                left: 0;
+            }
+        }
+    }
+
+
+    .branches {
+        max-width: 200px;
+        width: 200px;
+        transform: rotate(-90deg);
+    }
+
+    .day2 {
+        position: relative;
+
+        &::before {
+            content:"";
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-image: url("../../dist/liere.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            left: 88%;
+            bottom: 0px;
+
+            @include min($bp-tablet-px){
+                left: 90%;
+                transform: rotate(340deg);
+                height: 500px;
+            }
+
+        }
+
+
+    }
+}

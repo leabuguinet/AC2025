@@ -1,0 +1,60 @@
+
+
+@use 'sass:math';
+@import 'variables';
+@import 'programme';
+@import 'hebergement';
+@import 'menu';
+@import 'homepage';
+@import 'visiter';
+@import 'info';
+
+
+@font-face {
+    font-family: 'glimmer_of_lightregular';
+    src: url('./../../fonts/glimmer_of_light-webfont.woff2') format('woff2'),
+         url('./../../fonts/glimmer_of_light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'signpainter_housescriptRg';
+    src: url('./../../fonts/signpainter_housescript_regular-webfont.woff2') format('woff2'),
+         url('./../../fonts/signpainter_housescript_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+body, a {
+	font-family: 'signpainter_housescriptRg';
+}
+
+* {
+  margin: 0 ;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+html, body {
+    color: black;
+}
+
+.content {
+    margin-bottom: 5rem;
+}
+
